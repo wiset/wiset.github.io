@@ -20,7 +20,7 @@
  *              along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
  * @link        Homepage:     https://twitter-bot.js.ptkdev.io
- *              GitHub Repo:  https://github.com/ptkdev/twitter-bot.js
+ *              GitHub Repo:  https://github.com/social-manager-tools/twitter-bot.js
  */
 
 /**

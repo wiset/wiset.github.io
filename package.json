@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ptkdev/twitter-bot.js.git"
+    "url": "https://github.com/social-manager-tools/twitter-bot.js.git"
   },
   "keywords": [
     "bot",
@@ -27,7 +27,7 @@
   "author": "Patryk Rzucidlo [@ptkdev] <info@ptkdev.it> (https://ptkdev.it)",
   "license": "GPL-3.0",
   "bugs": {
-    "url": "https://github.com/ptkdev/twitter-bot.js/issues"
+    "url": "https://github.com/social-manager-tools/twitter-bot.js/issues"
   },
   "homepage": "https://twitter-bot.js.ptkdev.io",
   "dependencies": {
