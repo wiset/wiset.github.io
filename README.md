@@ -4,7 +4,7 @@
 
 <p align="center"><a href="#" alt="License"><img src="https://img.shields.io/badge/license-GLPv3-brightgreen.svg"></a>
 <a href="https://github.com/GoogleChrome/puppeteer" alt="powered by puppeteer"><img src="https://img.shields.io/badge/powered%20by-puppeteer-46aef7.svg"></a>
-<a href="https://github.com/ptkdev/twitter-bot.js/releases" alt="Version"><img src="https://img.shields.io/badge/version-IN%20DEVELOPMENT-lightgrey.svg"></a>
+<a href="https://github.com/social-manager-tools/twitter-bot.js/releases" alt="Version"><img src="https://img.shields.io/badge/version-IN%20DEVELOPMENT-lightgrey.svg"></a>
 <a href="https://slack.ptkdev.io" alt="Slack Chat"><img src="https://img.shields.io/badge/chat%20on-Slack-orange.svg"></a>
 <a href="https://paypal.me/ptkdev" alt="Paypale Donate"><img src="https://img.shields.io/badge/donate-PayPal-red.svg"></a></p>
 
@@ -25,14 +25,14 @@ This bot helps you increase the engagement of your Twitter profile through diffe
 * [✘] Follow-Defollow Mode: follow-defollow following users (ignore users in whitelist) 
 
 # Fast setup
-1. Download [stable version](https://github.com/ptkdev/twitter-bot.js/releases) and extract it.
+1. Download [stable version](https://github.com/social-manager-tools/twitter-bot.js/releases) and extract it.
 2. Download [Node.js](https://nodejs.org/it/) >= 7.6 and install it.
 3. Run `npm install` in `twitter-bot.js` folder.
 4. Copy root file `config.js.tpl` to `config.js`, fill it properly.
 5. Start the bot via `node bot.js`
 6. If work add star :star: at this project :heart:
 
-For advanced configuration see [INSTALL.md](https://github.com/ptkdev/twitter-bot.js/blob/master/INSTALL.md).
+For advanced configuration see [INSTALL.md](https://github.com/social-manager-tools/twitter-bot.js/blob/master/INSTALL.md).
 
 #### 2FA: SMS Pin
 If you received sms or email pin edit `loginpin.txt` and insert it on first line. Wait 3 minutes...
