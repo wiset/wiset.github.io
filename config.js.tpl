@@ -8,7 +8,7 @@ module.exports = {
     "twitter_username": "ptkdev", // without @
     "twitter_password": "password",
     "twitter_hashtag": ["muraleshunter", "like4like", "follow4follow"], //without #
-    "twitter_language" = "en"; // available: en, it, de, pl, uk, us, ru and more...
+    "twitter_language": "en", // available: en, it, de, pl, uk, us, ru and more...
     "twitter_pin": "sms", // method to receive pin (only sms available)
 
     // BOT Configs
