@@ -1,3 +1,5 @@
-# v0.1.0 (January 31, 2018)
+# v0.1.0 (July 22, 2018)
 
-* First Release in development
+* First Release.
+* Feature: likemode_realistic
+* Feature: rtmode_realistic
