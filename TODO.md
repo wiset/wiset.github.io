@@ -1,11 +1,5 @@
-# TODO
-Features:
-* GUI in electron
-* 2FA (sms pin enabled)
-* Like Mode Classic: bot select random hashtag from config list and like 1 random tweet
-* Retweet Mode Classic: bot select random hashtag from config list and retweet 1 random tweet
-* Retweet Mode List: bot select random tweet from config url-tweet-list and retweet 1 random tweet
-* Follow-Defollow Mode: follow-defollow following users (ignore users in whitelist) 
-
-Nice to have:
-* docker container
+# Roadmap
+See full roadmap (open task, todo and bugs) in [project page](https://github.com/social-manager-tools/twitter-bot.js/projects?query=is%3Aopen+sort%3Aname-asc).
+* ### [v0.1.X](https://github.com/social-manager-tools/twitter-bot.js/projects/1)
+* ### [v0.2.X](https://github.com/social-manager-tools/twitter-bot.js/projects/2)
+* ### [v0.3.X](https://github.com/social-manager-tools/twitter-bot.js/projects/3)
