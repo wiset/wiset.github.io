@@ -1,5 +1,5 @@
 # v0.2.0 (July 26, 2018)
-#####NOTE: Run `npm run clean` or `npm update` after update.
+##### NOTE: Run `npm run clean` or `npm update` after update.
 * Fix: default path of logs in `config.js.tpl`
 * Fix: Unliking already liked tweet
 * Fix: Unretweeting already rtweeted tweet
