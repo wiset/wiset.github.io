@@ -11,16 +11,16 @@
 #### 3. Run
 1. Download [stable bot version](https://github.com/social-manager-tools/twitter-bot.js/releases) and extract it.
 2. Run `npm install` in `twitter-bot.js` folder.
-3. Rename `config.js.tpl` to `config.js`, fill it properly.
+3. Rename `configs/config.js.tpl` to `configs/config.js`, fill it properly.
 4. Start the bot via `node bot.js`
 5. If work add star :star: at this project :heart:
 6. If you want help me: <b><a href="http://paypal.ptkdev.io">donate on paypal</a></b> or become a <b><a href="http://patreon.ptkdev.io">backer on patreon</a></b>.
 
 #### 4. Use raspbian chromium, not the node_modules version
-- Edit `config.js` and set `executable_path` to `/usr/bin/chromium-browser` in puppeteer section.
+- Edit `configs/config.js` and set `executable_path` to `/usr/bin/chromium-browser` in puppeteer section.
 
 #### 5. You don't have monitor?
-- Edit `config.js` and set `chrome_headless` to `true`, is mandatory.
+- Edit `configs/config.js` and set `chrome_headless` to `true`, is mandatory.
 
 # Setup - Raspbian 8
 #### 1. Install chromium v60
@@ -50,16 +50,16 @@ sudp dpkg -i chromium-browser_64.0.3282.167-0ubuntu0.17.10.1_armhf.deb
 #### 5. Run
 1. Download [stable bot version](https://github.com/social-manager-tools/twitter-bot.js/releases) and extract it.
 2. Run `npm install` in `twitter-bot.js` folder.
-3. Rename `config.js.tpl` to `config.js`, fill it properly.
+3. Rename `configs/config.js.tpl` to `configs/config.js`, fill it properly.
 4. Start the bot via `node bot.js`
 5. If work add star :star: at this project :heart:
 6. If you want help me: <b><a href="http://paypal.ptkdev.io">donate on paypal</a></b> or become a <b><a href="http://patreon.ptkdev.io">backer on patreon</a></b>.
 
 #### 6. Use raspbian chromium, not the node_modules version
-- Edit `config.js` and set `executable_path` to `/usr/bin/chromium-browser` in puppeteer section:
+- Edit `configs/config.js` and set `executable_path` to `/usr/bin/chromium-browser` in puppeteer section:
 
 #### 7. You don't have monitor?
-- Edit `config.js` and set `chrome_headless` to `true`, is mandatory.
+- Edit `configs/config.js` and set `chrome_headless` to `true`, is mandatory.
 
 # Setup - Debian Server
 #### 1. Install bot dependencies:
@@ -74,13 +74,13 @@ sudp dpkg -i chromium-browser_64.0.3282.167-0ubuntu0.17.10.1_armhf.deb
 #### 3. Run
 1. Download [stable bot version](https://github.com/social-manager-tools/twitter-bot.js/releases) and extract it.
 2. Run `npm install` in `twitter-bot.js` folder.
-3. Rename `config.js.tpl` to `config.js`, fill it properly.
+3. Rename `configs/config.js.tpl` to `configs/config.js`, fill it properly.
 4. Start the bot via `node bot.js`
 5. If work add star :star: at this project :heart:
 6. If you want help me: <b><a href="http://paypal.ptkdev.io">donate on paypal</a></b> or become a <b><a href="http://patreon.ptkdev.io">backer on patreon</a></b>.
 
 #### 4. You don't have monitor?
-- Edit `config.js` and set `chrome_headless` to `true`, is mandatory.
+- Edit `configs/config.js` and set `chrome_headless` to `true`, is mandatory.
 
 # Pin
 If you received sms or email pin edit `loginpin.txt` and insert it on first line. Wait 50-60 seconds...

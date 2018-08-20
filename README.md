@@ -2,9 +2,9 @@
 
 # TwitterBot.js
 
-[![](https://img.shields.io/badge/license-GLPv3-brightgreen.svg)](#) [![](https://img.shields.io/badge/powered%20by-puppeteer-46aef7.svg)](https://github.com/GoogleChrome/puppeteer) [![](https://img.shields.io/badge/version-v0.2.1-lightgrey.svg)](https://github.com/social-manager-tools/twitter-bot-lib/releases) [![](https://img.shields.io/badge/chat%20on-Slack-orange.svg)](https://slack.ptkdev.io) [![](https://img.shields.io/badge/blog-medium-2AE176.svg)](http://blog.ptkdev.io) [![](https://img.shields.io/badge/twitter-ptkdevio-2AA3EF.svg)](https://twitter.com/ptkdevio) [![](https://img.shields.io/badge/help-support@ptkdev.io-fbbc05.svg)](mailto:support@ptkdev.io)
+[![](https://img.shields.io/badge/license-GLPv3-brightgreen.svg)](#) [![](https://img.shields.io/badge/powered%20by-puppeteer-46aef7.svg)](https://github.com/GoogleChrome/puppeteer) [![](https://img.shields.io/badge/version-v0.2.1-lightgrey.svg)](https://github.com/social-manager-tools/twitter-bot-lib/releases) [![](https://img.shields.io/badge/chat%20on-slack-orange.svg)](https://slack.ptkdev.io) [![](https://img.shields.io/badge/chat%20on-discord-7289da.svg)](http://discord.ptkdev.io) [![](https://img.shields.io/badge/blog-medium-2AE176.svg)](http://blog.ptkdev.io) [![](https://img.shields.io/badge/twitter-ptkdevio-2AA3EF.svg)](https://twitter.com/ptkdevio)
 
-[![](https://img.shields.io/badge/donate-patreon-F87668.svg)](http://patreon.ptkdev.io) [![](https://img.shields.io/badge/donate-paypal-46AFE0.svg)](http://paypal.ptkdev.io) [![](https://img.shields.io/badge/buy%20me-coffee-4B788C.svg)](http://coffee.ptkdev.io)
+[![](https://img.shields.io/badge/donate-patreon-F87668.svg)](http://patreon.ptkdev.io) [![](https://img.shields.io/badge/donate-paypal-46AFE0.svg)](http://paypal.ptkdev.io) [![](https://img.shields.io/badge/buy%20me-coffee-4B788C.svg)](http://coffee.ptkdev.io) [![](https://img.shields.io/badge/help-support@ptkdev.io-fbbc05.svg)](mailto:support@ptkdev.io)
 
 [![](https://ptkdev.it/img/bot/ptkdev-twitter-bot.gif)](https://twitter.bot.ptkdev.io)
 
@@ -29,7 +29,7 @@ This bot helps you increase the engagement of your Twitter profile through diffe
 1. Download [stable bot version](https://github.com/social-manager-tools/twitter-bot.js/releases) and extract it.
 2. Download [Node.js](https://nodejs.org/it/) >= 7.6 and install it.
 3. Run `npm install` in `twitter-bot.js` folder.
-4. Rename `config.js.tpl` to `config.js`, fill it properly.
+4. Rename `configs/config.js.tpl` to `configs/config.js`, fill it properly.
 5. Start the bot via `node bot.js`
 6. If work add star :star: at this project :heart:
 7. If you want help me: **[donate on paypal](http://paypal.ptkdev.io)** or become a **[backer on patreon](http://patreon.ptkdev.io)**.
@@ -40,10 +40,17 @@ For advanced configuration see [INSTALL.md](https://github.com/social-manager-to
 If you received sms or email pin edit `loginpin.txt` and insert it on first line. Wait 50-60 seconds...
 
 #### Tips: hide browser
-Edit `config.js` and switch `chrome_headless` option to `true`.
+Edit `configs/config.js` and switch `chrome_headless` option to `true`.
 
 #### Check if work:
 See images in ./logs/screenshot or disable `chrome_headless` flag.
+
+#### Parameters
+Run bot with different configs (multi account), use: `node bot.js --config="./configs/config.js"`
+
+| Name     | Type    | Default                | Description                                  |
+| ---      | ---     | ---                    | ---                                          |
+| config   | String  | ./configs/config.js    | File path of the option file to run          |
 
 ## Desktop setup (GUI Version)
 1. Download [Social Manager Tools GUI](https://socialmanagertools.ptkdev.io/).
@@ -52,7 +59,7 @@ See images in ./logs/screenshot or disable `chrome_headless` flag.
 ## Docker setup
 If you prefer to run this using Docker, an official container is available from the [Docker Hub](https://hub.docker.com/r/socialmanagertools/twitter-bot.js).
 
-In order to run it, copy the `config.js.tpl` file, configure it as you prefer, then use it through volume mapping,
+In order to run it, copy the `configs/config.js.tpl` file, configure it as you prefer, then use it through volume mapping,
 like in this example:
 
 ```sh

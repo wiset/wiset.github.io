@@ -32,7 +32,15 @@
  * @link: https://www.npmjs.com/package/twitterbotlib
  * 
  */
-const config = require ("./config");
+const argv = require("yargs").argv;
+const fs = require("fs");
 const Bot = require("twitterbotlib");
-let bot = new Bot(config);
-bot.start();
+
+const config_file = (argv.config ? argv.config : "./configs/config.js");
+
+if (fs.existsSync(config_file)) {
+    let bot = new Bot(require(config_file));
+    bot.start();
+} else {
+    throw new Error("Config file not found");
+}
