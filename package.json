@@ -1,7 +1,7 @@
 {
   "name": "twitterbotjs",
   "description": "Twitter Bot made with love and Node.js",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "main": "bot.js",
   "author": "Patryk Rzucidlo [@ptkdev] <support@ptkdev.io> (https://ptkdev.it)",
   "license": "GPL-3.0",
@@ -16,14 +16,15 @@
   "scripts": {
     "start": "node bot.js",
     "start-forever": "forever -o ./logs/debug.log -e ./logs/errors.log start bot.js",
-    "start-pm2": "pm2 -o ./logs/debug.log -e ./logs/errors.log start bot.js",
-    "start-pm2-nolog": "pm2 -o /dev/null -e ./logs/errors.log start bot.js ",
+    "start-pm2": "PM2_HOME=./.pm2 pm2 -o ./logs/debug.log -e ./logs/errors.log start bot.js",
+    "start-pm2-nolog": "PM2_HOME=./.pm2 pm2 -o /dev/null -e ./logs/errors.log start bot.js ",
     "stop": "killall node",
     "stop-forever": "forever stop bot.js",
-    "stop-pm2": "pm2 stop bot.js",
+    "stop-pm2": "PM2_HOME=./pm2 pm2 stop bot.js",
     "clean": "rm -r node_modules && rm package-lock.json && npm install",
     "lint": "eslint ./ --cache --ignore-pattern .gitignore --fix",
-    "precommit-lint-check": "echo 'Pre-commit lint checks...' && exit 0"
+    "precommit-lint-check": "echo 'Pre-commit lint checks...' && exit 0",
+    "pm2": "PM2_HOME=./.pm2 pm2"
   },
   "pre-commit": [
     "precommit-lint-check",
@@ -39,8 +40,10 @@
     "webdriverio"
   ],
   "dependencies": {
-    "twitterbotlib": "^0.2.0",
-    "eslint": "^4.19.1"
+    "twitterbotlib": "^0.2.2",
+    "eslint": "^4.19.1",
+    "yargs": "^12.0.1",
+    "pm2": "^3.0.3"
   },
   "engines": {
     "node": ">=7.6.0"
