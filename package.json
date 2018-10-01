@@ -1,7 +1,7 @@
 {
   "name": "twitterbotjs",
   "description": "Twitter Bot made with love and Node.js",
-  "version": "0.2.3",
+  "version": "1.0.0-rolling",
   "main": "bot.js",
   "author": "Patryk Rzucidlo [@ptkdev] <support@ptkdev.io> (https://ptkdev.it)",
   "license": "GPL-3.0",
@@ -40,7 +40,7 @@
     "webdriverio"
   ],
   "dependencies": {
-    "twitterbotlib": "^0.2.3",
+    "twitterbotlib": "latest",
     "eslint": "^4.19.1",
     "yargs": "^12.0.1",
     "pm2": "^3.0.3"
