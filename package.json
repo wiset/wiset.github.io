@@ -1,60 +1,125 @@
 {
-  "name": "twitterbotjs",
-  "description": "Twitter Bot made with love and Node.js",
-  "version": "1.0.0-rolling",
-  "main": "bot.js",
-  "author": "Patryk Rzucidlo [@ptkdev] <support@ptkdev.io> (https://ptkdev.it)",
-  "license": "GPL-3.0",
-  "homepage": "https://twitter.bot.ptkdev.io",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/social-manager-tools/twitter-bot.js.git"
-  },
-  "bugs": {
-    "url": "https://github.com/social-manager-tools/twitter-bot.js/issues"
-  },
-  "scripts": {
-    "start": "node bot.js",
-    "start-forever": "forever -o ./logs/debug.log -e ./logs/errors.log start bot.js",
-    "start-pm2": "PM2_HOME=./.pm2 pm2 -o ./logs/debug.log -e ./logs/errors.log start bot.js",
-    "start-pm2-nolog": "PM2_HOME=./.pm2 pm2 -o /dev/null -e ./logs/errors.log start bot.js ",
-    "stop": "killall node",
-    "stop-forever": "forever stop bot.js",
-    "stop-pm2": "PM2_HOME=./pm2 pm2 stop bot.js",
-    "clean": "rm -r node_modules && rm package-lock.json && npm install",
-    "lint": "eslint ./ --cache --ignore-pattern .gitignore --fix",
-    "precommit-lint-check": "echo 'Pre-commit lint checks...' && exit 0",
-    "pm2": "PM2_HOME=./.pm2 pm2"
-  },
-  "pre-commit": [
-    "precommit-lint-check",
-    "lint"
-  ],
-  "keywords": [
-    "bot",
-    "ptkdev",
-    "twitter",
-    "twitter-bot",
-    "puppeteer",
-    "selenium",
-    "webdriverio"
-  ],
-  "dependencies": {
-    "twitterbotlib": "latest",
-    "eslint": "^4.19.1",
-    "yargs": "^12.0.1",
-    "pm2": "^3.0.3"
-  },
-  "engines": {
-    "node": ">=7.6.0"
-  },
-  "devDependencies": {
-    "eslint-config-standard": "^11.0.0",
-    "eslint-plugin-import": "^2.11.0",
-    "eslint-plugin-node": "^6.0.1",
-    "eslint-plugin-promise": "^3.7.0",
-    "eslint-plugin-snakecasejs": "^1.0.0",
-    "eslint-plugin-standard": "^3.1.0",
-    "pre-commit": "^1.2.2"
-  }
+	"name": "@social-manager-tools/twbot",
+	"description": "Social Manager Tools: Twitter Bot API",
+	"version": "0.10.0-nightly.20190511",
+	"main": "modules/core/lib.js",
+	"author": "Patryk Rzucidło [@ptkdev] <support@ptkdev.io> (https://ptk.dev)",
+	"license": "MIT",
+	"license-docs": "CC BY 4.0",
+	"license-images": "CC BY-NC 4.0",
+	"homepage": "https://socialmanager.tools",
+	"docs": "https://docs.socialmanager.tools",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/social-manager-tools/socialmanagertools-twbot.git"
+	},
+	"bugs": {
+		"url": "https://github.com/social-manager-tools/socialmanagertools-twbot/issues"
+	},
+	"collective": {
+		"type": "opencollective",
+		"url": "https://opencollective.com/social-manager-tools"
+	},
+	"scripts": {
+		"start": "node bot.js --config=\"./configs/config.js\"",
+		"stop": "killall node",
+		"start-pm2": "pm2 start .pm2-process.json",
+		"stop-pm2": "pm2 stop .pm2-process.json",
+		"clean": "rm -rf node_modules package-lock.json && npm install",
+		"update": "rm -f package-lock.json && npm update",
+		"lint": "eslint ./ --cache --ignore-pattern .gitignore",
+		"lint-fix": "eslint ./ --cache --ignore-pattern .gitignore --fix",
+		"git-set-upstream": "git remote add upstream git@github.com:social-manager-tools/socialmanagertools-twbot.git && git fetch upstream",
+		"git-pull-upstream": "git pull upstream master && git pull upstream beta && git pull upstream nightly",
+		"git-switch-master": "git checkout master && git submodule update --init --recursive && git pull --recursive",
+		"git-switch-beta": "git checkout beta && git submodule update --init --recursive && git pull --recursive",
+		"git-switch-nightly": "git checkout nightly && git submodule update --init --recursive && git pull --recursive",
+		"git-pull": "git pull --recursive",
+		"git-ignore-reset": "git rm -r --cached . && git add . && git commit -m \"[Fix] Removing all files in .gitignore\"",
+		"git-postinstall": "npm run docs-init && npm run git-set-upstream && git-switch-nightly",
+		"docker-fix": "chmod +x docker/armv7/* && chmod +x docker/armv8/*",
+		"npm-publish-master-latest": "git checkout master && json -I -f package.json -e 'this.dependencies.puppeteer=\"latest\"' && npm publish",
+		"npm-publish-master-chromev68": "git checkout master && json -I -f package.json -e 'this.dependencies.puppeteer=\"1.4.0\"' && npm publish --tag chromev68",
+		"npm-publish-master-chromev69": "git checkout master && json -I -f package.json -e 'this.dependencies.puppeteer=\"1.6.2\"' && npm publish --tag chromev69",
+		"npm-publish-master-chromev70": "git checkout master && json -I -f package.json -e 'this.dependencies.puppeteer=\"1.7.0\"' && npm publish --tag chromev70",
+		"npm-publish-master-chromev71": "git checkout master && json -I -f package.json -e 'this.dependencies.puppeteer=\"1.9.0\"' && npm publish --tag chromev71",
+		"npm-publish-master-chromev72": "git checkout master && json -I -f package.json -e 'this.dependencies.puppeteer=\"1.11.0\"' && npm publish --tag chromev72",
+		"npm-publish-master-chromev73": "git checkout master && json -I -f package.json -e 'this.dependencies.puppeteer=\"1.12.2\"' && npm publish --tag chromev73",
+		"npm-publish-master-chromev74": "git checkout master && json -I -f package.json -e 'this.dependencies.puppeteer=\"1.13.0\"' && npm publish --tag chromev74",
+		"npm-publish-beta": "git checkout beta && npm publish --tag beta",
+		"npm-publish-nightly": "git checkout nightly && npm publish --tag nightly",
+		"docs-init": "git submodule add -f https://github.com/social-manager-tools/socialmanagertools-docs.git docs",
+		"docs": "git submodule update --recursive && markserv ./docs/README.md",
+		"test": "jest",
+		"contributors-generate": "all-contributors generate",
+		"postinstall": "opencollective-postinstall",
+		"devpostinstall": "npm run docs-init && npm run contributors-generate && npm run docker-fix && opencollective-postinstall"
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "npm run lint && npm run contributors-generate"
+		}
+	},
+	"keywords": [
+		"bot",
+		"ptkdev",
+		"twitter",
+		"twitter-lib",
+		"twitter-api",
+		"twitter-bot",
+		"twitter-puppeteer",
+		"instapy",
+		"instabot",
+		"instagress",
+		"puppeteer",
+		"ninjalitics",
+		"socialads",
+		"socialblade",
+		"selenium",
+		"webdriverio"
+	],
+	"engines": {
+		"node": ">=10.0.0"
+	},
+	"dependencies": {
+		"puppeteer": "latest",
+		"chalk": "latest",
+		"fs-extra": "latest",
+		"lowdb": "latest",
+		"request": "latest",
+		"uuid": "latest",
+		"strip-ansi": "latest"
+	},
+	"devDependencies": {
+		"eslint": "latest",
+		"eslint-config-standard": "latest",
+		"eslint-plugin-import": "latest",
+		"eslint-plugin-jsdoc": "latest",
+		"eslint-plugin-jest": "latest",
+		"eslint-plugin-node": "latest",
+		"eslint-plugin-promise": "latest",
+		"eslint-plugin-snakecasejs": "latest",
+		"eslint-plugin-standard": "latest",
+		"eslint-plugin-html": "latest",
+		"all-contributors-cli": "latest",
+		"opencollective": "latest",
+		"opencollective-postinstall": "latest",
+		"pm2": "latest",
+		"json": "latest",
+		"chai": "latest",
+		"jest": "latest",
+		"husky": "latest",
+		"yargs": "latest",
+		"markserv": "latest"
+	},
+	"contributors": [
+		"Massimo [@maXfer75] <maxfer75@hotmail.com> (https://twitter.com/maXfer75)",
+		"Gaetano [@TaniK72] <tanik1972@gmail.com> (https://twitter.com/TaniK72)",
+		"Ilua Chubarov [@Ilya] <agoalofalife@gmail.com> (https://github.com/agoalofalife)",
+		"Julian Xhokaxhiu [@julianxhokaxhiu] (https://github.com/julianxhokaxhiu)",
+		"lecoueyl [@lecoueyl] (https://github.com/lecoueyl)",
+		"Lollymouth [@lollymouth] (https://github.com/lollymouth)",
+		"roNn23 [@roNn23] (https://github.com/roNn23)",
+		"Andrea [@m0s4ik] (https://github.com/m0s4ik)"
+	]
 }

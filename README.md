@@ -1,98 +1,162 @@
-[![](https://twitter.bot.ptkdev.io/img/twitterbot_logo.png)](https://twitter.bot.ptkdev.io)
+[![Social Manager Tools: IG BOT](https://raw.githubusercontent.com/social-manager-tools/socialmanagertools-twbot/master/.github/assets/smt_twbot_logo.png)](https://socialmanager.tools)
 
-# TwitterBot.js
+# 🤖 Social Manager Tools: 🐣 Twitter Bot API
 
-[![](https://img.shields.io/badge/license-GLPv3-brightgreen.svg)](#) [![](https://img.shields.io/badge/powered%20by-puppeteer-46aef7.svg)](https://github.com/GoogleChrome/puppeteer) [![](https://img.shields.io/badge/version-rolling%20release-lightgrey.svg)](https://github.com/social-manager-tools/twitter-bot-lib/releases) [![](https://img.shields.io/badge/chat%20on-slack-orange.svg)](https://slack.ptkdev.io) [![](https://img.shields.io/badge/chat%20on-discord-7289da.svg)](http://discord.ptkdev.io) [![](https://img.shields.io/badge/blog-medium-2AE176.svg)](http://blog.ptkdev.io) [![](https://img.shields.io/badge/twitter-ptkdevio-2AA3EF.svg)](https://twitter.com/ptkdevio)
+[![](https://img.shields.io/badge/version-v0.10.0--nightly.20190610-lightgrey.svg)](https://github.com/social-manager-tools/socialmanagertools-twbot/releases) [![](https://img.shields.io/npm/v/@social-manager-tools/twbot.svg)](https://www.npmjs.com/package/@social-manager-tools/twbot) [![](https://img.shields.io/badge/license-MIT-brightgreen.svg)](#) [![](https://img.shields.io/badge/ES-9-F7DF1E.svg)](https://wikipedia.org/wiki/ECMAScript) [![](https://img.shields.io/badge/powered%20by-puppeteer-46aef7.svg)](https://github.com/GoogleChrome/puppeteer) [![](https://snyk.io/test/npm/@social-manager-tools/twbot/badge.svg)](https://snyk.io/test/github/social-manager-tools/socialmanagertools-twbot)
 
-[![](https://img.shields.io/badge/donate-patreon-F87668.svg)](http://patreon.ptkdev.io) [![](https://img.shields.io/badge/donate-paypal-46AFE0.svg)](http://paypal.ptkdev.io) [![](https://img.shields.io/badge/buy%20me-coffee-4B788C.svg)](http://coffee.ptkdev.io) [![](https://img.shields.io/badge/help-support@ptkdev.io-fbbc05.svg)](mailto:support@ptkdev.io)
+> This library (including bot and API methods) allow you to increase visits, likes and followers on your social profile through different algorithms and offers API for developers to include custom bot functionality in their  own applications. You will increase likes on your tweets and your followers!
 
-[![](https://ptkdev.it/img/bot/ptkdev-twitter-bot.gif)](https://twitter.bot.ptkdev.io)
+> ⛔ **DISCLAIMER**: This is an **unofficial** library and offers no warranty! The developers and contributors of the project do not assume any responsibility in case of ban of your account. Use of twitter bots does not comply with the terms of the service: use this software at your own risk. A "bot" is legal software, but the use of a bot continuously violates the terms of use of Twitter and you risk a: __soft ban__ (such as limited actions or follow-up) or you risk __ban__ with suspension for a few days (or permanent). All trademarks and logos belong to their respective owners.
 
-## What does it do
-This bot helps you increase the engagement of your Twitter profile through different social algorithms. Increase the likes on your tweets and followers.
+## 🎁 Support: Donate
+> This project is **free**, **open source** and I try to provide excellent **free support**. Why donate? I work on this project several hours a week or in my spare time and try to keep it up to date and working. I do not intend to charge the basic features, but this cannot be done without your financial support, even small. There are professional bots with closed source on the Internet that save passwords on the cloud for €14/month: we want to protect your passwords and offer you a better product than others. A lower donation would allow continuous development, ever better quality and the realization of this dream. **THANK YOU!**
 
-## Features
-* [✓] Easy to use
-* [✓] Login
-* [✓] 2FA (sms pin enabled)
-* [✓] Multi-Session
-* [✓] Multi-Platform (Windows 10, Mac OSX, Linux, [Raspberry PI 3](https://github.com/social-manager-tools/twitter-bot.js/blob/master/INSTALL.md))
-* [✓] Errors manager (bad pin, bad password)
-* [✓] Screenshot and Verbose logger
-* [✓] Like Mode Realistic: bot select random hashtag from config list and like fast 19-20 tweet, sleep 15-20min and repeat this all time. Sleep at night.
-* [✓] Retweet Mode Realistic: bot select random hashtag from config list and rt fast 19-20 tweet, sleep 15-20min and repeat this all time. Sleep at night.
-* [✘] Comment Mode Classic: select random comment and random hashtag and write comment under tweet.
-* [✘] Follow/Defollow Classic: follow user from random hashtag and defollow after 1h.
-* [✘] Defollow All: defollow all your following (ignore users in whitelist).
+[![](https://img.shields.io/badge/donate-paypal-005EA6.svg)](http://paypal.ptkdev.io) [![](https://img.shields.io/badge/donate-patreon-F87668.svg)](http://patreon.ptkdev.io) [![](https://img.shields.io/badge/donate-opencollective-5DA4F9.svg)](http://opencollective.ptkdev.io) [![](https://img.shields.io/badge/buy%20me-coffee-4B788C.svg)](http://coffee.ptkdev.io)
 
-## Fast setup (CLI Version)
-1. Download [stable bot version](https://github.com/social-manager-tools/twitter-bot.js/releases) and extract it.
-2. Download [Node.js](https://nodejs.org/it/) >= 7.6 and install it.
-3. Run `npm install` in `twitter-bot.js` folder.
-4. Rename `configs/config.js.tpl` to `configs/config.js`, fill it properly.
-5. Start the bot via `node bot.js`
-6. If work add star :star: at this project :heart:
-7. If you want help me: **[donate on paypal](http://paypal.ptkdev.io)** or become a **[backer on patreon](http://patreon.ptkdev.io)**.
+## 📎 Menu
+- 💡 [Features](#-features)
+- 💾 Installation:
+	- 🔨 [Install From Source](http://docs.socialmanager.tools/twbot/installation/source/README.md)
+	- 🔨 [Install From NPM](http://docs.socialmanager.tools/twbot/installation/npm/README.md)
+	- 👨‍💻 [Desktop App](http://docs.socialmanager.tools/gui/installation/README.md) (Windows, Linux, Mac)
+	- 🦀 [Raspberry PI](http://docs.socialmanager.tools/twbot/installation/raspberry/README.md) (Raspbian 9)
+	- 🐧 [Linux Server](http://docs.socialmanager.tools/twbot/installation/linux/README.md) (Debian 9 Server)
+	- 🐳 [Docker](http://docs.socialmanager.tools/twbot/installation/docker/README.md)
+- 🔑 Configs:
+	- 🔌 [VPN/Proxy](http://docs.socialmanager.tools/twbot/configs/vpn-proxy/README.md)
+	- 💿 [List of Mode](http://docs.socialmanager.tools/twbot/configs/modes/README.md)
+	- 📀 [How set Multi-account](http://docs.socialmanager.tools/twbot/configs/multiaccount/README.md)
+- 🚽 [Documentation](https://github.com/social-manager-tools/socialmanagertools-docs/blob/master/README.md) (I hate writing it so, please, read it)
+- 📚 [API Documentation](http://docs.socialmanager.tools/twbot/api/README.md) (How to create your personal bot or mode)
+- 💻 [Developers Guidelines](http://docs.socialmanager.tools/developers/guidesline/README.md) (If you want to contribute)
+- 🐛 [Known Bugs](https://github.com/social-manager-tools/socialmanagertools-twbot/issues?q=is%3Aopen+is%3Aissue+label%3Abug)
+- 🍻 Community:
+	- 🐦 [Telegram group](http://telegram.ptkdev.io)
+	- 🐔 [Discord](http://discord.ptkdev.io)
+	- 🐓 [Slack](http://slack.ptkdev.io)
+	- 🕊 [Medium](http://blog.ptkdev.io)
+	- 🐤 [Twitter](http://twitter.ptkdev.io)
 
-For advanced configuration see [INSTALL.md](https://github.com/social-manager-tools/twitter-bot.js/blob/master/INSTALL.md).
+## 🔖 Screenshot
+[![](https://raw.githubusercontent.com/social-manager-tools/socialmanagertools-twbot/master/.github/assets/screenshot/smt_twbot_screenshot.gif)](#)
 
-#### 2FA: SMS Pin
-If you received sms or email pin edit `loginpin.txt` and insert it on first line. Wait 50-60 seconds...
+## 💡 Features
+* [✔️] Easy to use
+* [✔️] Login
+* [✔️] 2FA (bad location)
+* [✔️] 2FA (sms pin enabled)
+* [✔️] Multi-Session
+* [✔️] Multi-Platform (Windows 10, Mac OSX, Linux and Raspberry PI)
+* [✔️] Error management feature (bad pin, bad password)
+* [✔️] Screenshot and Verbose logger
+* [✔️] Like Mode Realistic: bot selects a random hashtag from a config list and likes fast 10-12 tweets, it sleeps 15-20min and repeats this.
+* [✔️] RT Mode Realistic: bot selects a random hashtag from a config list and rt fast 10-12 tweets, it sleeps 15-20min and repeats this.
 
-#### Tips: hide browser
-Edit `configs/config.js` and switch `chrome_headless` option to `true`.
+## 👨‍💻 Desktop setup (GUI)
+1. Download [Social Manager Tools](https://github.com/social-manager-tools/social-manager-tools/releases) GUI.
+2. Run the application.
+3. If it works add a star 🌟 at this project ❤️
+4. If you want to help me: **donate on [paypal](http://paypal.ptkdev.io)/[ko-fi](http://coffee.ptkdev.io)** or become a **[backer on patreon](http://patreon.ptkdev.io)**.
 
-#### Check if work:
-See images in ./logs/screenshot or disable `chrome_headless` flag.
+## 🔨 Fast usage (Source Code)
+1. Download [stable](https://github.com/social-manager-tools/socialmanagertools-twbot/archive/master.zip), [beta](https://github.com/social-manager-tools/socialmanagertools-twbot/archive/beta.zip) or [nightly](https://github.com/social-manager-tools/socialmanagertools-twbot/archive/nightly.zip) and extract it.
+2. Download [Node.js](https://nodejs.org/it/) (LTS release) and install it.
+3. Run `npm install` in `socialmanagertools-twbot` folder.
+4. Remove `.tpl` suffix from `config.js.tpl` file in `configs` folder and fill it properly.
+5. Start the bot via `npm run start`
+6. If it works add a star 🌟 at this project ❤️
+7. If you want to help me: **donate on [paypal](http://paypal.ptkdev.io)/[ko-fi](http://coffee.ptkdev.io)** or become a **[backer on patreon](http://patreon.ptkdev.io)**.
 
-#### Parameters
-Run bot with different configs (multi account), use: `node bot.js --config="./configs/config.js"`
+## 🔧 Fast usage (NPM Module)
+1. Run `npm install @social-manager-tools/twbot@latest --save` (Available: @latest, @beta and @nightly)
+2. Get `config.js` file from `/node_modules/@social-manager-tools/twbot/configs/` folder.
+3. Remove `.tpl` suffix from `config.js.tpl` file in `configs` folder and fill it properly.
+4. On your code require library, config and run bot, example:
+```javascript
+const config = require ("./config");
+const Bot = require("@social-manager-tools/twbot");
+let bot = new Bot(config);
 
-| Name     | Type    | Default                | Description                                  |
-| ---      | ---     | ---                    | ---                                          |
-| config   | String  | ./configs/config.js    | File path of the option file to run          |
+(async () => {
+	await bot.start();
 
-## Desktop setup (GUI Version)
-1. Download [Social Manager Tools GUI](https://socialmanagertools.ptkdev.io/).
-2. Run application.
+	let api = await bot.api();
 
-## Docker setup
-If you prefer to run this using Docker, an official container is available from the [Docker Hub](https://hub.docker.com/r/socialmanagertools/twitter-bot.js).
+	let response = await api.login.flow();
 
-In order to run it, copy the `configs/config.js.tpl` file, configure it as you prefer, then use it through volume mapping,
+	if (response.status) {
+		response = await api.twofa.flow();
+	}
+
+	if (response.status) {
+		response = await api.mode.flow();
+	}
+
+	await bot.stop();
+})();
+```
+5. If it works add a star 🌟 at this project ❤️
+6. If you want to help me: **donate on [paypal](http://paypal.ptkdev.io)/[ko-fi](http://coffee.ptkdev.io)** or become a **[backer on patreon](http://patreon.ptkdev.io)**.
+
+## 🐳 Docker setup
+If you prefer to run this using Docker, an official container is available from the [Docker Hub](https://hub.docker.com/u/socialmanagertools).
+
+In order to run it, copy the `config.js.tpl` file (template of available in `configs` folder), configure it as you prefer, then use it through volume mapping,
 like in this example:
 
 ```sh
-$ docker run \
-    --restart=always \
-    --name=twitter-bot \
-    -d \
-    -v /path/to/config.js:/app/config.js \
-    socialmanagertools/twitter-bot.js &>/dev/null
+docker run --restart=always --name=socialmanagertools-twbot -d -v /path/to/configs/config.js:/app/configs/config.js socialmanagertools/twbot:amd64
 ```
 
-## Roadmap
-See full roadmap (open task, todo and bugs) in [project page](https://github.com/social-manager-tools/twitter-bot.js/projects?query=is%3Aopen+sort%3Aname-asc).
-* [v0.1.X](https://github.com/social-manager-tools/twitter-bot.js/projects/1)
-* [v0.2.X](https://github.com/social-manager-tools/twitter-bot.js/projects/2)
-* [v0.3.X](https://github.com/social-manager-tools/twitter-bot.js/projects/3)
+**AVAILABLE TAGS:** `amd64` (64bit), `i386` (32bit),`armv7` (Raspberry PI 2 and Raspberry PI 3), `armv8` (Raspberry PI ARMv8). All point to the master github repository (stable version) but is available `-nightly` suffix, example: `armv7-nightly`.
 
-## Sorry for snake_case
-I love :snake: snake_case syntax sorry for this :sob: don't hate me.
+**WARNING:** with docker is mandatory edit `config.js` and set `chrome_headless` on `enabled` (or to true if you use `v0.9.X` version) and set `chrome_executable_path` to `/usr/bin/chromium-browser`. Without this manual fix docker don't work.
 
-[![](https://socialmanagertools.ptkdev.io/img/socialmanagertools_logo.png)](https://github.com/social-manager-tools)
+## 📚 Documentation
+1. Run `npm run docs-init`
+2. Run `npm run docs`
 
-# Social Manager Tools
+If you want are available online [here](http://docs.socialmanager.tools/README.md).
 
-[Social Manager Tools GUI](https://github.com/social-manager-tools/social-manager-tools)  
-[InstagramBot.js](https://github.com/social-manager-tools/instagram-bot.js) ([LIB](https://github.com/social-manager-tools/instagram-bot-lib))  
-[TwitterBot.js](https://github.com/social-manager-tools/twitter-bot.js) ([LIB](https://github.com/social-manager-tools/twitter-bot-lib))  
-[FacebookBot.js](https://github.com/social-manager-tools/facebook-bot.js) ([LIB](https://github.com/social-manager-tools/facebook-bot-lib))  
-[WordpressTelegramBot.js](https://github.com/social-manager-tools/wordpress-telegram-bot.js) ([LIB](https://github.com/social-manager-tools/wordpress-telegram-bot-lib))  
-[MediumTelegramBot.js](https://github.com/social-manager-tools/medium-telegram-bot.js) ([LIB](https://github.com/social-manager-tools/medium-telegram-bot-lib))  
+## 👑 Sponsors (max 10 available)
+Support this project by becoming a sponsor. 🙏 Become a sponsor on [patreon](http://patreon.ptkdev.io) or [opencollective](https://opencollective.com/social-manager-tools#sponsor). Your logo will show up here with a link to your website.
 
-# License
+[![](https://opencollective.com/social-manager-tools/sponsor/0/avatar.svg)](https://opencollective.com/social-manager-tools/sponsor/0/website) [![](https://opencollective.com/social-manager-tools/sponsor/1/avatar.svg)](https://opencollective.com/social-manager-tools/sponsor/1/website) [![](https://opencollective.com/social-manager-tools/sponsor/2/avatar.svg)](https://opencollective.com/social-manager-tools/sponsor/2/website) [![](https://opencollective.com/social-manager-tools/sponsor/3/avatar.svg)](https://opencollective.com/social-manager-tools/sponsor/3/website) [![](https://opencollective.com/social-manager-tools/sponsor/4/avatar.svg)](https://opencollective.com/social-manager-tools/sponsor/4/website) [![](https://opencollective.com/social-manager-tools/sponsor/5/avatar.svg)](https://opencollective.com/social-manager-tools/sponsor/5/website) [![](https://opencollective.com/social-manager-tools/sponsor/6/avatar.svg)](https://opencollective.com/social-manager-tools/sponsor/6/website) [![](https://opencollective.com/social-manager-tools/sponsor/7/avatar.svg)](https://opencollective.com/social-manager-tools/sponsor/7/website) [![](https://opencollective.com/social-manager-tools/sponsor/8/avatar.svg)](https://opencollective.com/social-manager-tools/sponsor/8/website) [![](https://opencollective.com/social-manager-tools/sponsor/9/avatar.svg)](https://opencollective.com/social-manager-tools/sponsor/9/website)
 
-GNU GENERAL PUBLIC LICENSE
+## 🦄 Backers
+Thanks to all our backers! 🙏 Become a backer on [patreon](http://patreon.ptkdev.io) or [opencollective](https://opencollective.com/social-manager-tools#sponsor)
 
-Copyright (c) 2018 Patryk Rzucidło (PTKDev)
+[![Twitch: prattquellolive](https://raw.githubusercontent.com/social-manager-tools/socialmanagertools-twbot/nightly/.github/assets/patreon/prattquello.png)](https://www.twitch.tv/prattquellolive) [![JavaScript Room](https://raw.githubusercontent.com/social-manager-tools/socialmanagertools-twbot/nightly/.github/assets/patreon/jsroom.png)](https://www.twitter.com/room_js/) [![](https://opencollective.com/social-manager-tools/backers.svg?width=890)](https://opencollective.com/social-manager-tools#backers)
+
+## ❤️ Contributing
+I 💟 contributions! I will happily accept your pull request! Translations, grammatical corrections (GrammarNazi you are welcome! Yes my English is horrible, sorry), new modes, best css selectors, fix and new feature! Read [Developers Guidelines](http://docs.socialmanager.tools/developers/guidesline/README.md) for best practices. Do not be afraid, if the code is not perfect we will work together 👯 and remember to insert your name in `.all-contributorsrc` and `package.json` file.
+
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START -->
+<!-- prettier-ignore -->
+<table><tr><td align="center"><a href="https://ptk.dev"><img src="https://avatars1.githubusercontent.com/u/442844?v=4" width="100px;" alt="Patryk Rzucidło"/><br /><sub><b>Patryk Rzucidło</b></sub></a><br /><a href="https://github.com/ptkdev/socialmanagertools-twbot/commits?author=ptkdev" title="Code">💻</a> <a href="#translation-ptkdev" title="Translation">🌍</a> <a href="https://github.com/ptkdev/socialmanagertools-twbot/commits?author=ptkdev" title="Documentation">📖</a> <a href="https://github.com/ptkdev/socialmanagertools-twbot/issues?q=author%3Aptkdev" title="Bug reports">🐛</a></td><td align="center"><a href="https://twitter.com/maxfer75"><img src="https://raw.githubusercontent.com/social-manager-tools/socialmanagertools-twbot/master/.github/assets/avatar/maxfer75.jpg" width="100px;" alt="MaXfer "/><br /><sub><b>MaXfer </b></sub></a><br /><a href="#design-maxfer75" title="Design">🎨</a></td><td align="center"><a href="https://twitter.com/tanik72"><img src="https://raw.githubusercontent.com/social-manager-tools/socialmanagertools-twbot/master/.github/assets/avatar/tanik72.jpg" width="100px;" alt="Tanik"/><br /><sub><b>Tanik</b></sub></a><br /><a href="#design-TaniK72" title="Design">🎨</a></td><td align="center"><a href="https://github.com/agoalofalife"><img src="https://avatars1.githubusercontent.com/u/15719824?v=4" width="100px;" alt="Ilua Chubarov"/><br /><sub><b>Ilua Chubarov</b></sub></a><br /><a href="https://github.com/ptkdev/socialmanagertools-twbot/commits?author=agoalofalife" title="Code">💻</a></td><td align="center"><a href="https://julianxhokaxhiu.com"><img src="https://avatars1.githubusercontent.com/u/1237070?v=4" width="100px;" alt="Julian Xhokaxhiu"/><br /><sub><b>Julian Xhokaxhiu</b></sub></a><br /><a href="https://github.com/ptkdev/socialmanagertools-twbot/commits?author=julianxhokaxhiu" title="Code">💻</a></td><td align="center"><a href="https://lecouey.me"><img src="https://avatars1.githubusercontent.com/u/8327054?v=4" width="100px;" alt="Léonard Lecouey"/><br /><sub><b>Léonard Lecouey</b></sub></a><br /><a href="https://github.com/ptkdev/socialmanagertools-twbot/commits?author=lecoueyl" title="Code">💻</a></td></tr><tr><td align="center"><a href="https://github.com/lollymouth"><img src="https://avatars1.githubusercontent.com/u/43947950?v=4" width="100px;" alt="Lollymouth"/><br /><sub><b>Lollymouth</b></sub></a><br /><a href="https://github.com/ptkdev/socialmanagertools-twbot/commits?author=lollymouth" title="Code">💻</a></td><td align="center"><a href="https://github.com/roNn23"><img src="https://avatars1.githubusercontent.com/u/849194?v=4" width="100px;" alt="roNn23"/><br /><sub><b>roNn23</b></sub></a><br /><a href="https://github.com/ptkdev/socialmanagertools-twbot/issues?q=author%3AroNn23" title="Bug reports">🐛</a></td><td align="center"><a href="https://github.com/MoltenKH0R"><img src="https://avatars1.githubusercontent.com/u/6023575?v=4" width="100px;" alt="MoltenKH0R"/><br /><sub><b>MoltenKH0R</b></sub></a><br /><a href="#translation-MoltenKH0R" title="Translation">🌍</a></td></tr></table>
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+> 💰 In the future, if the donations allow it, I would like to share some of the success with those who helped me the most. For me open source is share of code, share development knowledges and share donations!
+
+## 📲 Tools
+[![](https://img.shields.io/badge/app-social%20manager%20tools-ff7f19.svg)](http://socialmanager.tools/)
+[![](https://img.shields.io/badge/api-twitter%20bot-895a4d.svg)](https://github.com/social-manager-tools/socialmanagertools-twbot)
+[![](https://img.shields.io/badge/api-twitter%20bot-21B7F4.svg)](https://github.com/social-manager-tools/socialmanagertools-twbot)
+[![](https://img.shields.io/badge/api-facebook%20bot-3b5998.svg)](https://github.com/social-manager-tools/socialmanagertools-fbbot)
+[![](https://img.shields.io/badge/telegram%20bot-feed%20rss%20for%20wordpress%20&amp;%20medium-00AB6C.svg)](https://github.com/social-manager-tools/social-manager-tools-tgbot)
+
+[![](https://img.shields.io/badge/app-meingifs-E1215B.svg)](https://meingifs.pics/)
+[![](https://img.shields.io/badge/stickers-ptkdev-128C7E.svg)](https://stickers.ptkdev.io/)
+
+## 🐍 Sorry for snake_case
+I love snake_case syntax sorry for this 😭 don't hate me.
+
+## 💫 License
+* Code and Contributions have **MIT License**
+* Images and logos have **CC BY-NC 4.0 License**
+* Documentations and Translations have **CC BY 4.0 License**
+
+###### Copyleft (c) 2018-2019 [Patryk Rzucidło](https://ptk.dev) ([@PTKDev](https://twitter.com/ptkdev)) <[support@ptkdev.io](mailto:support@ptkdev.io)>
